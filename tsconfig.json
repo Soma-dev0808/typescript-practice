@@ -1,0 +1,40 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        // "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "esnext",
+        "target": "es2017",
+        "jsx": "react",
+        // JavaScriptファイルのコンパイルを許可するかどうか。
+        "allowJs": true,
+        // Babelとの互換性が可能になる。
+        "esModuleInterop": true,
+        // 型チェックプロセス中に、参照されるファイル名の大文字と小文字が一致していることを確認。
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "node",
+        // モジュールを.json構成ファイルに役立つファイルに含める。
+        "resolveJsonModule": true,
+        // タイプチェックプロセスでデフォルトのエクスポートを行わずに、モジュールからのデフォルトのインポートが可能に。
+        "allowSyntheticDefaultImports": true,
+        // babelを使用してコンパイルするので、Typescriptではコードを生成しない。
+        "noEmit": true,
+        // タイプチェックプロセスに含まれる標準のタイピング。ブラウザーのDOMと最新バージョンのECMAScriptのタイプを使用することを選択。
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ]
+    },
+    "include": [
+        "src"
+    ],
+    // ts-node to use .ts file for a webpack.
+    "ts-node": {
+        "transpileOnly": true, // you can specify ts-node options here
+        "compilerOptions": {
+            "module": "commonjs" // you can also override compilerOptions.  Only ts-node will use these overrides
+        }
+    }
+}

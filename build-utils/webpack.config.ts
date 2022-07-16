@@ -2,10 +2,8 @@ const { merge } = require('webpack-merge');
 
 const commonConfig = require('./webpack.common');
 
-module.exports = ({ env }) => {
-    const envConfig = require(`./webpack.${env}.js`);
-
-    console.log(envConfig);
+module.exports = ({ env }: { env: string }) => {
+    const envConfig = require(`./webpack.${env}.ts`);
 
     return merge(commonConfig, envConfig);
 };

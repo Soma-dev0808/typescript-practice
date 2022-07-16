@@ -3,12 +3,12 @@ import { createRoot } from 'react-dom/client';
 
 import App from './App';
 
-const title = 'TS practice';
+const title = 'TSX practice';
 
-const container = document.getElementById('app');
+const container = document.getElementById('app') as HTMLElement;
 
 const root = createRoot(container);
 
 root.render(<App title={title} />);
 
-module.hot.accept();
+module.hot?.accept();
